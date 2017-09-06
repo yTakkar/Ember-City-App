@@ -1,0 +1,8 @@
+{{input value=cityName}}
+<button {{action "addCity"}} >Add City</button>
+
+<ul>
+  {{#each cities as |city| }}
+    <li data-index="{{city.id}}" {{action "deleteCity" city.id on="click"}} >{{ city.name }}</li>
+  {{/each}}
+</ul>
